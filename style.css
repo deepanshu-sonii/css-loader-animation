@@ -1,0 +1,70 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.loader_text {
+    position:absolute;
+    width: 100vw;
+    height: 200px;
+    color: red;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 100px;
+    text-align: center;
+    z-index: 1;
+    animation: loadText 1s linear 0s infinite;
+}
+
+@keyframes loadText {
+    0%{color: red;}
+    25%{color: green;}
+    50%{color: blue;}
+    75%{color: yellow;}
+    100%{color: red;}
+}
+
+
+.loader_style {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 20px solid transparent;
+    border-top-color: red;
+    background-color: white;
+    border-radius: 50%;
+    animation: loadSpinner 1s linear infinite;
+}
+
+@keyframes loadSpinner {
+    0% {
+        transform: rotate(0deg);
+        border-color: transparent;
+        border-top-color: red;
+    }
+
+    25% {
+        transform: rotate(90deg);
+        border-color: transparent;
+        border-right-color: green;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        border-color: transparent;
+        border-bottom-color: blue;
+    }
+
+    75% {
+        transform: rotate(270deg);
+        border-color: transparent;
+        border-left-color: yellow;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-color: transparent;
+        border-top-color: red;
+    }
+}
